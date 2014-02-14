@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">ARM</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3ABC7CA5-5B96-4D8D-8FA1-DF8FA8A3BA5D}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonoTest</RootNamespace>
+    <AssemblyName>MonoTest</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>MonoTest_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>MonoTest.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsPhone\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsPhone\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsPhone\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsPhone\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\TestBed\GameSettings.cs" />
+    <Compile Include="Demo\TestBed\KeyboardManager.cs" />
+    <Compile Include="Demo\TestBed\MathUtils.cs" />
+    <Compile Include="Demo\TestBed\Rand.cs" />
+    <Compile Include="Demo\TestBed\RubeTestEntry.cs" />
+    <Compile Include="Demo\TestBed\Screen.cs" />
+    <Compile Include="Demo\TestBed\Test.cs" />
+    <Compile Include="Demo\TestBed\TestDemos.cs" />
+    <Compile Include="Demo\TestBed\TestEntries.cs" />
+    <Compile Include="Demo\TestBed\TestEntry.cs" />
+    <Compile Include="GameMain.cs" />
+    <Compile Include="GUIDemo.cs" />
+    <Compile Include="Rube\Collision\Collision.cs" />
+    <Compile Include="Rube\Collision\Distance.cs" />
+    <Compile Include="Rube\Collision\DynamicTree.cs" />
+    <Compile Include="Rube\Collision\DynamicTreeBroadPhase.cs" />
+    <Compile Include="Rube\Collision\IBroadPhase.cs" />
+    <Compile Include="Rube\Collision\QuadTree.cs" />
+    <Compile Include="Rube\Collision\QuadTreeBroadPhase.cs" />
+    <Compile Include="Rube\Collision\Shapes\ChainShape.cs" />
+    <Compile Include="Rube\Collision\Shapes\CircleShape.cs" />
+    <Compile Include="Rube\Collision\Shapes\EdgeShape.cs" />
+    <Compile Include="Rube\Collision\Shapes\PolygonShape.cs" />
+    <Compile Include="Rube\Collision\Shapes\Shape.cs" />
+    <Compile Include="Rube\Collision\TimeOfImpact.cs" />
+    <Compile Include="Rube\Common\ConvexHull\ChainHull.cs" />
+    <Compile Include="Rube\Common\ConvexHull\GiftWrap.cs" />
+    <Compile Include="Rube\Common\ConvexHull\Melkman.cs" />
+    <Compile Include="Rube\Common\Curve.cs" />
+    <Compile Include="Rube\Common\CurveKey.cs" />
+    <Compile Include="Rube\Common\CurveKeyCollection.cs" />
+    <Compile Include="Rube\Common\Decomposition\BayazitDecomposer.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDTDecomposer.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Delaunay\DelaunayTriangle.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Delaunay\Sweep\AdvancingFront.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Delaunay\Sweep\AdvancingFrontNode.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Delaunay\Sweep\DTSweep.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepConstraint.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepContext.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepPointComparator.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Delaunay\Sweep\PointOnEdgeException.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\ITriangulatable.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Orientation.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Polygon\Polygon.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Polygon\PolygonPoint.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Polygon\PolygonSet.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Sets\ConstrainedPointSet.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Sets\PointSet.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\TriangulationConstraint.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\TriangulationContext.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\TriangulationMode.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\TriangulationPoint.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\TriangulationUtil.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Util\FixedArray3.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Util\FixedBitArray3.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Util\PointGenerator.cs" />
+    <Compile Include="Rube\Common\Decomposition\CDT\Util\PolygonGenerator.cs" />
+    <Compile Include="Rube\Common\Decomposition\EarclipDecomposer.cs" />
+    <Compile Include="Rube\Common\Decomposition\FlipcodeDecomposer.cs" />
+    <Compile Include="Rube\Common\Decomposition\SeidelDecomposer.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\Edge.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\MonotoneMountain.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\Node.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\Point.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\QueryGraph.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\Sink.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\Trapezoid.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\TrapezoidalMap.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\Triangulator.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\XNode.cs" />
+    <Compile Include="Rube\Common\Decomposition\Seidel\YNode.cs" />
+    <Compile Include="Rube\Common\Decomposition\Triangulate.cs" />
+    <Compile Include="Rube\Common\FixedArray.cs" />
+    <Compile Include="Rube\Common\HashSet.cs" />
+    <Compile Include="Rube\Common\LineTools.cs" />
+    <Compile Include="Rube\Common\Math.cs" />
+    <Compile Include="Rube\Common\MathHelper.cs" />
+    <Compile Include="Rube\Common\Matrix.cs" />
+    <Compile Include="Rube\Common\Path.cs" />
+    <Compile Include="Rube\Common\PathManager.cs" />
+    <Compile Include="Rube\Common\PhysicsLogic\FilterData.cs" />
+    <Compile Include="Rube\Common\PhysicsLogic\PhysicsLogic.cs" />
+    <Compile Include="Rube\Common\PhysicsLogic\RealExplosion.cs" />
+    <Compile Include="Rube\Common\PhysicsLogic\SimpleExplosion.cs" />
+    <Compile Include="Rube\Common\PolygonManipulation\CuttingTools.cs" />
+    <Compile Include="Rube\Common\PolygonManipulation\SimpleCombiner.cs" />
+    <Compile Include="Rube\Common\PolygonManipulation\SimplifyTools.cs" />
+    <Compile Include="Rube\Common\PolygonManipulation\YuPengClipper.cs" />
+    <Compile Include="Rube\Common\PolygonTools.cs" />
+    <Compile Include="Rube\Common\Serialization.cs" />
+    <Compile Include="Rube\Common\TextureTools\MarchingSquares.cs" />
+    <Compile Include="Rube\Common\TextureTools\MSTerrain.cs" />
+    <Compile Include="Rube\Common\TextureTools\TextureConverter.cs" />
+    <Compile Include="Rube\Common\Vector2.cs" />
+    <Compile Include="Rube\Common\Vector3.cs" />
+    <Compile Include="Rube\Common\Vertices.cs" />
+    <Compile Include="Rube\Content\BodyContainer.cs" />
+    <Compile Include="Rube\Content\FarseerBodyContainerReader.cs" />
+    <Compile Include="Rube\Content\FarseerPolygonContainerReader.cs" />
+    <Compile Include="Rube\Content\PolygonContainer.cs" />
+    <Compile Include="Rube\Controllers\AbstractForceController.cs" />
+    <Compile Include="Rube\Controllers\BuoyancyController.cs" />
+    <Compile Include="Rube\Controllers\Controller.cs" />
+    <Compile Include="Rube\Controllers\GravityController.cs" />
+    <Compile Include="Rube\Controllers\SimpleWindForce.cs" />
+    <Compile Include="Rube\Controllers\VelocityLimitController.cs" />
+    <Compile Include="Rube\ConvertUnits.cs" />
+    <Compile Include="Rube\DebugViewBase.cs" />
+    <Compile Include="Rube\DebugView\DebugViewXNA.cs" />
+    <Compile Include="Rube\DebugView\PrimitiveBatch.cs" />
+    <Compile Include="Rube\Dynamics\Body.cs" />
+    <Compile Include="Rube\Dynamics\BreakableBody.cs" />
+    <Compile Include="Rube\Dynamics\ContactManager.cs" />
+    <Compile Include="Rube\Dynamics\Contacts\Contact.cs" />
+    <Compile Include="Rube\Dynamics\Contacts\ContactSolver.cs" />
+    <Compile Include="Rube\Dynamics\Fixture.cs" />
+    <Compile Include="Rube\Dynamics\Island.cs" />
+    <Compile Include="Rube\Dynamics\Joints\AngleJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\DistanceJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\FixedAngleJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\FixedMouseJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\FrictionJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\GearJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\Joint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\MotorJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\PrismaticJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\PulleyJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\RevoluteJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\RopeJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\SliderJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\WeldJoint.cs" />
+    <Compile Include="Rube\Dynamics\Joints\WheelJoint.cs" />
+    <Compile Include="Rube\Dynamics\TimeStep.cs" />
+    <Compile Include="Rube\Dynamics\World.cs" />
+    <Compile Include="Rube\Dynamics\WorldCallbacks.cs" />
+    <Compile Include="Rube\Factories\BodyFactory.cs" />
+    <Compile Include="Rube\Factories\FixtureFactory.cs" />
+    <Compile Include="Rube\Factories\JointFactory.cs" />
+    <Compile Include="Rube\Factories\LinkFactory.cs" />
+    <Compile Include="Rube\Farseer2Json\Nb2dJson.cs" />
+    <Compile Include="Rube\Farseer2Json\Nb2dJsonImage.cs" />
+    <Compile Include="Rube\Fluids\FluidDefinition.cs" />
+    <Compile Include="Rube\Fluids\FluidParticle.cs" />
+    <Compile Include="Rube\Fluids\FluidSystem.cs" />
+    <Compile Include="Rube\Fluids\FluidSystem2.cs" />
+    <Compile Include="Rube\Fluids\HashGrid.cs" />
+    <Compile Include="Rube\Fluids\SpartialTable.cs" />
+    <Compile Include="Rube\Fluids\Spring.cs" />
+    <Compile Include="Rube\Fluids\SpringHash.cs" />
+    <Compile Include="Rube\Settings.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\Button.cs" />
+    <Compile Include="UI\Controls\Control.cs" />
+    <Compile Include="UI\Controls\HorizontalAlignment.cs" />
+    <Compile Include="UI\Controls\Image.cs" />
+    <Compile Include="UI\Controls\Label.cs" />
+    <Compile Include="UI\Controls\ListBox.cs" />
+    <Compile Include="UI\Controls\StatusBar.cs" />
+    <Compile Include="UI\Controls\TextBox.cs" />
+    <Compile Include="UI\Controls\TextControl.cs" />
+    <Compile Include="UI\Controls\ToggleButton.cs" />
+    <Compile Include="UI\Controls\VerticalAlignment.cs" />
+    <Compile Include="UI\Core\EventList.cs" />
+    <Compile Include="UI\Core\GuiContent.cs" />
+    <Compile Include="UI\Core\ItemEventArgs.cs" />
+    <Compile Include="UI\Core\MonoGameGuiManager.cs" />
+    <Compile Include="UI\Core\Screen.cs" />
+    <Compile Include="UI\Fonts\BmFontXmlSerializer\FontChar.cs" />
+    <Compile Include="UI\Fonts\BmFontXmlSerializer\FontCommon.cs" />
+    <Compile Include="UI\Fonts\BmFontXmlSerializer\FontFile.cs" />
+    <Compile Include="UI\Fonts\BmFontXmlSerializer\FontInfo.cs" />
+    <Compile Include="UI\Fonts\BmFontXmlSerializer\FontKerning.cs" />
+    <Compile Include="UI\Fonts\BmFontXmlSerializer\FontLoader.cs" />
+    <Compile Include="UI\Fonts\BmFontXmlSerializer\FontPage.cs" />
+    <Compile Include="UI\Fonts\FontRenderer.cs" />
+    <Compile Include="UI\Fonts\Size.cs" />
+    <Compile Include="UI\Interfaces\IDraw.cs" />
+    <Compile Include="UI\Interfaces\IDrawManager.cs" />
+    <Compile Include="UI\Interfaces\IGuiProvider.cs" />
+    <Compile Include="UI\Interfaces\IInputManager.cs" />
+    <Compile Include="UI\Interfaces\ILayoutControl.cs" />
+    <Compile Include="UI\Interfaces\IRectangle.cs" />
+    <Compile Include="UI\Interfaces\IUpdate.cs" />
+    <Compile Include="UI\Layouts\DockItem.cs" />
+    <Compile Include="UI\Layouts\DockLayout.cs" />
+    <Compile Include="UI\Layouts\DockStyle.cs" />
+    <Compile Include="UI\Layouts\GridItem.cs" />
+    <Compile Include="UI\Layouts\GridLayout.cs" />
+    <Compile Include="UI\Layouts\Layer.cs" />
+    <Compile Include="UI\Layouts\LayerLayout.cs" />
+    <Compile Include="UI\Layouts\LayoutControl.cs" />
+    <Compile Include="UI\Layouts\Margin.cs" />
+    <Compile Include="UI\Layouts\RelativeItem.cs" />
+    <Compile Include="UI\Layouts\RelativeLayout.cs" />
+    <Compile Include="UI\Layouts\StackLayout.cs" />
+    <Compile Include="UI\Textures\TextureAtlas.cs" />
+    <Compile Include="UI\Textures\TextureRegion.cs" />
+    <Compile Include="UI\VisualStyles\Border.cs" />
+    <Compile Include="UI\VisualStyles\BorderedVisualStyle.cs" />
+    <Compile Include="UI\VisualStyles\IGuiSprite.cs" />
+    <Compile Include="UI\VisualStyles\TextStyle.cs" />
+    <Compile Include="UI\VisualStyles\VisualStyle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="GamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Atlas1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\ExampleFont_0.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\beaker.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\ExampleFont.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\font.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Qarmic sans Abridged.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Assets\1001fonts-qarmic-sans-eula.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Reference Include="MonoGame.Framework" Condition=" '$(Platform)' == 'ARM' ">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\WindowsPhone\ARM\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework" Condition=" '$(Platform)' == 'x86' ">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\WindowsPhone\x86\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <Target Name="MonoGame_RemoveXnaAssemblies" AfterTargets="ImplicitlyExpandTargetFramework">
+    <Message Text="MonoGame - Removing XNA Assembly references!" Importance="normal" />
+    <ItemGroup>
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.GamerServices.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.GamerServicesExtensions.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.Input.Touch.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.MediaLibraryExtensions.dll'" />
+    </ItemGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

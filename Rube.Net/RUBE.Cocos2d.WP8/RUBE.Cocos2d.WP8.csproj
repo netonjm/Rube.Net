@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">ARM</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72778D87-238A-4F25-AD7F-10098E8377EB}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RUBE.Cocos2d.WP8</RootNamespace>
+    <AssemblyName>RUBE.Cocos2d.WP8</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>EmptyProject_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>RUBE.Cocos2d.WP8.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsPhone8\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsPhone8\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsPhone8\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsPhone8\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="IntroLayer.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RUBE\Collision\Collision.cs" />
+    <Compile Include="RUBE\Collision\Distance.cs" />
+    <Compile Include="RUBE\Collision\DynamicTree.cs" />
+    <Compile Include="RUBE\Collision\DynamicTreeBroadPhase.cs" />
+    <Compile Include="RUBE\Collision\IBroadPhase.cs" />
+    <Compile Include="RUBE\Collision\QuadTree.cs" />
+    <Compile Include="RUBE\Collision\QuadTreeBroadPhase.cs" />
+    <Compile Include="RUBE\Collision\Shapes\ChainShape.cs" />
+    <Compile Include="RUBE\Collision\Shapes\CircleShape.cs" />
+    <Compile Include="RUBE\Collision\Shapes\EdgeShape.cs" />
+    <Compile Include="RUBE\Collision\Shapes\PolygonShape.cs" />
+    <Compile Include="RUBE\Collision\Shapes\Shape.cs" />
+    <Compile Include="RUBE\Collision\TimeOfImpact.cs" />
+    <Compile Include="RUBE\Common\ConvexHull\ChainHull.cs" />
+    <Compile Include="RUBE\Common\ConvexHull\GiftWrap.cs" />
+    <Compile Include="RUBE\Common\ConvexHull\Melkman.cs" />
+    <Compile Include="RUBE\Common\Curve.cs" />
+    <Compile Include="RUBE\Common\CurveKey.cs" />
+    <Compile Include="RUBE\Common\CurveKeyCollection.cs" />
+    <Compile Include="RUBE\Common\Decomposition\BayazitDecomposer.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDTDecomposer.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Delaunay\DelaunayTriangle.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Delaunay\Sweep\AdvancingFront.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Delaunay\Sweep\AdvancingFrontNode.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Delaunay\Sweep\DTSweep.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepConstraint.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepContext.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepPointComparator.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Delaunay\Sweep\PointOnEdgeException.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\ITriangulatable.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Orientation.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Polygon\Polygon.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Polygon\PolygonPoint.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Polygon\PolygonSet.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Sets\ConstrainedPointSet.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Sets\PointSet.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\TriangulationConstraint.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\TriangulationContext.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\TriangulationMode.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\TriangulationPoint.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\TriangulationUtil.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Util\FixedArray3.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Util\FixedBitArray3.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Util\PointGenerator.cs" />
+    <Compile Include="RUBE\Common\Decomposition\CDT\Util\PolygonGenerator.cs" />
+    <Compile Include="RUBE\Common\Decomposition\EarclipDecomposer.cs" />
+    <Compile Include="RUBE\Common\Decomposition\FlipcodeDecomposer.cs" />
+    <Compile Include="RUBE\Common\Decomposition\SeidelDecomposer.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\Edge.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\MonotoneMountain.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\Node.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\Point.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\QueryGraph.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\Sink.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\Trapezoid.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\TrapezoidalMap.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\Triangulator.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\XNode.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Seidel\YNode.cs" />
+    <Compile Include="RUBE\Common\Decomposition\Triangulate.cs" />
+    <Compile Include="RUBE\Common\FixedArray.cs" />
+    <Compile Include="RUBE\Common\HashSet.cs" />
+    <Compile Include="RUBE\Common\LineTools.cs" />
+    <Compile Include="RUBE\Common\Math.cs" />
+    <Compile Include="RUBE\Common\MathHelper.cs" />
+    <Compile Include="RUBE\Common\Matrix.cs" />
+    <Compile Include="RUBE\Common\Path.cs" />
+    <Compile Include="RUBE\Common\PathManager.cs" />
+    <Compile Include="RUBE\Common\PhysicsLogic\FilterData.cs" />
+    <Compile Include="RUBE\Common\PhysicsLogic\PhysicsLogic.cs" />
+    <Compile Include="RUBE\Common\PhysicsLogic\RealExplosion.cs" />
+    <Compile Include="RUBE\Common\PhysicsLogic\SimpleExplosion.cs" />
+    <Compile Include="RUBE\Common\PolygonManipulation\CuttingTools.cs" />
+    <Compile Include="RUBE\Common\PolygonManipulation\SimpleCombiner.cs" />
+    <Compile Include="RUBE\Common\PolygonManipulation\SimplifyTools.cs" />
+    <Compile Include="RUBE\Common\PolygonManipulation\YuPengClipper.cs" />
+    <Compile Include="RUBE\Common\PolygonTools.cs" />
+    <Compile Include="RUBE\Common\Serialization.cs" />
+    <Compile Include="RUBE\Common\TextureTools\MarchingSquares.cs" />
+    <Compile Include="RUBE\Common\TextureTools\MSTerrain.cs" />
+    <Compile Include="RUBE\Common\TextureTools\TextureConverter.cs" />
+    <Compile Include="RUBE\Common\Vector2.cs" />
+    <Compile Include="RUBE\Common\Vector3.cs" />
+    <Compile Include="RUBE\Common\Vertices.cs" />
+    <Compile Include="RUBE\Content\BodyContainer.cs" />
+    <Compile Include="RUBE\Content\FarseerBodyContainerReader.cs" />
+    <Compile Include="RUBE\Content\FarseerPolygonContainerReader.cs" />
+    <Compile Include="RUBE\Content\PolygonContainer.cs" />
+    <Compile Include="RUBE\Controllers\AbstractForceController.cs" />
+    <Compile Include="RUBE\Controllers\BuoyancyController.cs" />
+    <Compile Include="RUBE\Controllers\Controller.cs" />
+    <Compile Include="RUBE\Controllers\GravityController.cs" />
+    <Compile Include="RUBE\Controllers\SimpleWindForce.cs" />
+    <Compile Include="RUBE\Controllers\VelocityLimitController.cs" />
+    <Compile Include="RUBE\ConvertUnits.cs" />
+    <Compile Include="RUBE\DebugViewBase.cs" />
+    <Compile Include="RUBE\DebugView\DebugViewXNA.cs" />
+    <Compile Include="RUBE\DebugView\PrimitiveBatch.cs" />
+    <Compile Include="RUBE\Dynamics\Body.cs" />
+    <Compile Include="RUBE\Dynamics\BreakableBody.cs" />
+    <Compile Include="RUBE\Dynamics\ContactManager.cs" />
+    <Compile Include="RUBE\Dynamics\Contacts\Contact.cs" />
+    <Compile Include="RUBE\Dynamics\Contacts\ContactSolver.cs" />
+    <Compile Include="RUBE\Dynamics\Fixture.cs" />
+    <Compile Include="RUBE\Dynamics\Island.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\AngleJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\DistanceJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\FixedAngleJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\FixedMouseJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\FrictionJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\GearJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\Joint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\MotorJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\PrismaticJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\PulleyJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\RevoluteJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\RopeJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\SliderJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\WeldJoint.cs" />
+    <Compile Include="RUBE\Dynamics\Joints\WheelJoint.cs" />
+    <Compile Include="RUBE\Dynamics\TimeStep.cs" />
+    <Compile Include="RUBE\Dynamics\World.cs" />
+    <Compile Include="RUBE\Dynamics\WorldCallbacks.cs" />
+    <Compile Include="RUBE\Factories\BodyFactory.cs" />
+    <Compile Include="RUBE\Factories\FixtureFactory.cs" />
+    <Compile Include="RUBE\Factories\JointFactory.cs" />
+    <Compile Include="RUBE\Factories\LinkFactory.cs" />
+    <Compile Include="RUBE\Farseer2Json\Nb2dJson.cs" />
+    <Compile Include="RUBE\Farseer2Json\Nb2dJsonImage.cs" />
+    <Compile Include="RUBE\Fluids\FluidDefinition.cs" />
+    <Compile Include="RUBE\Fluids\FluidParticle.cs" />
+    <Compile Include="RUBE\Fluids\FluidSystem.cs" />
+    <Compile Include="RUBE\Fluids\FluidSystem2.cs" />
+    <Compile Include="RUBE\Fluids\HashGrid.cs" />
+    <Compile Include="RUBE\Fluids\SpartialTable.cs" />
+    <Compile Include="RUBE\Fluids\Spring.cs" />
+    <Compile Include="RUBE\Fluids\SpringHash.cs" />
+    <Compile Include="RUBE\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="GamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\MarkerFelt-22.xnb" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="box2d" Condition=" $(Platform) == 'x86' ">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\x86\box2d.dll</HintPath>
+    </Reference>
+    <Reference Include="box2d" Condition=" $(Platform) != 'x86'">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\ARM\box2d.dll</HintPath>
+    </Reference>
+    <Reference Include="cocos2d-xna" Condition=" $(Platform) == 'x86' ">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\x86\cocos2d-xna.dll</HintPath>
+    </Reference>
+    <Reference Include="cocos2d-xna" Condition=" $(Platform) != 'x86'">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\ARM\cocos2d-xna.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib" Condition=" $(Platform) == 'x86' ">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\x86\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib" Condition=" $(Platform) != 'x86'">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\ARM\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework" Condition=" $(Platform) == 'x86' ">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\x86\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework" Condition=" $(Platform) != 'x86'">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\ARM\MonoGame.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <Target Name="MonoGame_RemoveXnaAssemblies" AfterTargets="ImplicitlyExpandTargetFramework">
+    <Message Text="MonoGame - Removing XNA Assembly references!" Importance="normal" />
+    <ItemGroup>
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.GamerServices.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.GamerServicesExtensions.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.Input.Touch.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.MediaLibraryExtensions.dll'" />
+    </ItemGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

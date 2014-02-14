@@ -1,0 +1,250 @@
+
+{
+	"allowSleep" : true,
+	"autoClearForces" : true,
+	"body" : 
+	[
+		
+		{
+			"angle" : 2.090213775634766,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"chain" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ -0.2786052525043488, 0.2786052823066711 ],
+							"y" : [ -0.9530199766159058, 0.9530200362205505 ]
+						}
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture3"
+				},
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture2",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.9929077625274658,
+								0.9929077029228210,
+								-0.9929078817367554,
+								-0.9929076433181763
+							],
+							"y" : 
+							[
+								-0.9929077625274658,
+								0.9929078221321106,
+								0.9929078221321106,
+								-0.9929077625274658
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"massData-I" : 2.591817378997803,
+			"massData-center" : 
+			{
+				"x" : -1.435184238118836e-008,
+				"y" : 4.816359933101921e-008
+			},
+			"massData-mass" : 3.943463325500488,
+			"name" : "body2",
+			"position" : 
+			{
+				"x" : -1.287688374519348,
+				"y" : -1.694773077964783
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : -0.1291182041168213,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture1",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								1.380652666091919,
+								-1.380652427673340,
+								-1.380652546882629,
+								1.380652546882629
+							],
+							"y" : 
+							[
+								1.380652904510498,
+								1.380652666091919,
+								-1.380652427673340,
+								-1.380652308464050
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"massData-I" : 9.689611434936523,
+			"massData-center" : 
+			{
+				"x" : 5.995458707275247e-008,
+				"y" : 2.075330769457651e-007
+			},
+			"massData-mass" : 7.624805927276611,
+			"name" : "body1",
+			"position" : 
+			{
+				"x" : -2.309318780899048,
+				"y" : 0.7249655127525330
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0.6192328929901123,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 0,
+						"radius" : 1.505450725555420
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0"
+				}
+			],
+			"linearVelocity" : 0,
+			"massData-I" : 8.068374633789063,
+			"massData-mass" : 7.120048999786377,
+			"name" : "body0",
+			"position" : 
+			{
+				"x" : 1.295419573783875,
+				"y" : -0.2682875394821167
+			},
+			"type" : 2
+		}
+	],
+	"collisionbitplanes" : 
+	{
+		"names" : 
+		[
+			"bitplane1",
+			"bitplane2",
+			"bitplane3",
+			"bitplane4",
+			"bitplane5",
+			"bitplane6",
+			"bitplane7",
+			"bitplane8",
+			"bitplane9",
+			"bitplane10",
+			"bitplane11",
+			"bitplane12",
+			"bitplane13",
+			"bitplane14",
+			"bitplane15",
+			"bitplane16",
+			"bitplane17",
+			"bitplane18",
+			"bitplane19",
+			"bitplane20",
+			"bitplane21",
+			"bitplane22",
+			"bitplane23",
+			"bitplane24",
+			"bitplane25",
+			"bitplane26",
+			"bitplane27",
+			"bitplane28",
+			"bitplane29",
+			"bitplane30",
+			"bitplane31",
+			"bitplane32"
+		]
+	},
+	"continuousPhysics" : true,
+	"gravity" : 
+	{
+		"x" : 0,
+		"y" : -10
+	},
+	"image" : 
+	[
+		
+		{
+			"angle" : 3.185947179794312,
+			"aspectScale" : 1,
+			"body" : -1,
+			"center" : 
+			{
+				"x" : -3.222221374511719,
+				"y" : -1.666667342185974
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.1927460432052612,
+					-6.632807731628418,
+					-6.251696586608887,
+					0.188365101814270
+				],
+				"y" : 
+				[
+					2.769623756408691,
+					2.483790397644043,
+					-6.102958679199219,
+					-5.817125320434570
+				]
+			},
+			"file" : "E:/Personal/Mis Imagenes/DSCF12~1.JPG",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.1927460432052612,
+				2.769623756408691,
+				-6.632807731628418,
+				2.483790397644043,
+				-6.251696586608887,
+				-6.102958679199219,
+				0.188365101814270,
+				-5.817125320434570
+			],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 8.595202445983887
+		}
+	],
+	"positionIterations" : 3,
+	"stepsPerSecond" : 60.0,
+	"subStepping" : false,
+	"velocityIterations" : 8,
+	"warmStarting" : true
+}

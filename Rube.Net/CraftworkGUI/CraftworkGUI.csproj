@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0F78796-5186-485E-8A14-30456A28230C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CraftworkGUI</RootNamespace>
+    <AssemblyName>CraftworkGUI</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="OpenTK">
+      <HintPath>..\..\Libs\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Sdl">
+      <HintPath>..\..\Libs\Tao.Sdl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\..\Libs\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\Libs\MonoGame.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\Control.cs" />
+    <Compile Include="Controls\HorizontalAlignment.cs" />
+    <Compile Include="Controls\Image.cs" />
+    <Compile Include="Controls\Label.cs" />
+    <Compile Include="Controls\ListBox.cs" />
+    <Compile Include="Controls\StatusBar.cs" />
+    <Compile Include="Controls\TextBox.cs" />
+    <Compile Include="Controls\TextControl.cs" />
+    <Compile Include="Controls\ToggleButton.cs" />
+    <Compile Include="Controls\VerticalAlignment.cs" />
+    <Compile Include="Core\EventList.cs" />
+    <Compile Include="Core\GuiContent.cs" />
+    <Compile Include="Core\ItemEventArgs.cs" />
+    <Compile Include="Core\MonoGameGuiManager.cs" />
+    <Compile Include="Core\Screen.cs" />
+    <Compile Include="Fonts\FontRenderer.cs" />
+    <Compile Include="Fonts\Size.cs" />
+    <Compile Include="Fonts\BmFontXmlSerializer\FontChar.cs" />
+    <Compile Include="Fonts\BmFontXmlSerializer\FontCommon.cs" />
+    <Compile Include="Fonts\BmFontXmlSerializer\FontFile.cs" />
+    <Compile Include="Fonts\BmFontXmlSerializer\FontInfo.cs" />
+    <Compile Include="Fonts\BmFontXmlSerializer\FontKerning.cs" />
+    <Compile Include="Fonts\BmFontXmlSerializer\FontLoader.cs" />
+    <Compile Include="Fonts\BmFontXmlSerializer\FontPage.cs" />
+    <Compile Include="Interfaces\IDraw.cs" />
+    <Compile Include="Interfaces\IDrawManager.cs" />
+    <Compile Include="Interfaces\IGuiProvider.cs" />
+    <Compile Include="Interfaces\IInputManager.cs" />
+    <Compile Include="Interfaces\ILayoutControl.cs" />
+    <Compile Include="Interfaces\IRectangle.cs" />
+    <Compile Include="Interfaces\IUpdate.cs" />
+    <Compile Include="Layouts\DockItem.cs" />
+    <Compile Include="Layouts\DockLayout.cs" />
+    <Compile Include="Layouts\DockStyle.cs" />
+    <Compile Include="Layouts\GridItem.cs" />
+    <Compile Include="Layouts\GridLayout.cs" />
+    <Compile Include="Layouts\Layer.cs" />
+    <Compile Include="Layouts\LayerLayout.cs" />
+    <Compile Include="Layouts\LayoutControl.cs" />
+    <Compile Include="Layouts\Margin.cs" />
+    <Compile Include="Layouts\RelativeItem.cs" />
+    <Compile Include="Layouts\RelativeLayout.cs" />
+    <Compile Include="Layouts\StackLayout.cs" />
+    <Compile Include="Textures\TextureAtlas.cs" />
+    <Compile Include="Textures\TextureRegion.cs" />
+    <Compile Include="VisualStyles\Border.cs" />
+    <Compile Include="VisualStyles\BorderedVisualStyle.cs" />
+    <Compile Include="VisualStyles\IGuiSprite.cs" />
+    <Compile Include="VisualStyles\TextStyle.cs" />
+    <Compile Include="VisualStyles\VisualStyle.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
